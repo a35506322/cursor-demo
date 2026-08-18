@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cursor Demo 測試頁</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 2rem 3rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    p { opacity: 0.85; margin-bottom: 1.5rem; }
+    button {
+      background: #fff;
+      color: #764ba2;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover { transform: scale(1.05); }
+    #counter { font-size: 3rem; font-weight: bold; margin: 1rem 0; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>🎉 Hello Cursor!</h1>
+    <p>這是一個隨便寫的測試 HTML 頁面</p>
+    <div id="counter">0</div>
+    <button onclick="increment()">點我 +1</button>
+  </div>
+  <script>
+    let count = 0;
+    function increment() {
+      count++;
+      document.getElementById('counter').textContent = count;
+    }
+  </script>
+</body>
+</html>
